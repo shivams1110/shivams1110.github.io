@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "title": "Dentmark",
+      "imageUrl": "https://lh3.googleusercontent.com/qWd7DL2w2KT0i8Z0C0ysBbfp1aNLULGQq03APMfCOWz_X3z3pmq3GWEgF47Ph7xyHSk=s360-rw",
+      "subtitle": "Dentmark is basically E-commerce App for Dentist for buy Dental equipments.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.dentmark"
+    },
+    {
+      "title": "Tirth Yatra",
+      "imageUrl": "https://lh3.googleusercontent.com/avKD7ALGLBw_rWBt-Dtdbv4wH1moeuAYIIg7JUsjk_vjWWa0LTM0mRmd0a_CGybErg=s360-rw",
+      "subtitle": "This is basically religious app for provide all over India Tirth yatra place information in one place.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.tirathyatra"
+    },
+    {
+      "title": "Fortune Group",
+      "imageUrl": "https://lh3.googleusercontent.com/Nk1p6ewCpNoq2EuaD5yJ3WKwcRobusLti0Y7dGyy4jZt-qZE9Sz816H0aK-oe88WuNuc=s360-rw",
+      "subtitle": "This app is basically for sales person who is going for marketing. User tracking, Daily visit Report submit, attendance feature is in built.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.fortunegroup"
+    },
+    {
+      "title": "Eastman Tools",
+      "imageUrl": "https://lh3.googleusercontent.com/VdXI5l3HfhZK5fTs7BL2RiUUwAIFOMgNIdK38PHZmgMERTqPIKJa_RSNPWhwGrODIKw=s360-rw",
+      "subtitle": "This app is basically for sales person who is going for marketing. User tracking, Sale order punching, attendance feature is in built.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.eastmantools"
+    },
+    {
+      "title": "GNA University",
+      "imageUrl": "https://lh3.googleusercontent.com/jiSEYaLMNJSvwuUHM5ciOE9QmzJ201cJ28q5OvkGi5EE-PICbreX_BsjcEdm_FZiBdnz=s360-rw",
+      "subtitle": "In this app we provide all information regarding user need to get admission or search course.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.gnauniversity"
+    },
+    {
+      "title": "Royalways Technologies Pvt. Ltd.",
+      "imageUrl": "https://lh3.googleusercontent.com/AcwyI1DXQOBBRkDocWmytQ3w3xByM4-7H3tG_X__3MDGqkJ8SnG9mV92HQICV8NMY5wZ=s360-rw",
+      "subtitle": "This is company app where we shows company’s projects and information of company.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.royalways"
+    },
+    {
+      "title": "Monte carlo Retail",
+      "imageUrl": "https://lh3.googleusercontent.com/gulVstqmjSIKzBrxWWYT4Af03JmrmL844i3eipFBqFX44XXI_fvm3JE1C-2BzWnO1Qs=s360-rw",
+      "subtitle": "This app is only for retailer. For getting information regarding Stocks, sale per day. Attendance, Target Achieved.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.royalways.montecarloretail"
+    },
+    {
+      "title": "Election Eye",
+      "imageUrl": "https://lh3.googleusercontent.com/NL3Ja9ELF-A5koTo7IwX1d6bQEJlIw0HTY-2myDZgDqtvonLMrwZSz-JvOB_Y5MQe5Q=s360-rw",
+      "subtitle": "This is used for in election time campaigning parties not spend too much money on campaigning. This app is used in Ludhiana and nearby.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=election.royalways.com"
+    },
+    {
+      "title": "Status Downloader",
+      "imageUrl": "https://lh3.googleusercontent.com/rZ3gGv72s0I028gkpmt3QZsF4usFEUFef8WYgPoGoD_7xbpVfop1gAgBnHS7Fn6RiOA=s360-rw",
+      "subtitle": "In this app user can save and share Whatsapp Stories showing in his phone.",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developertechie.statusdownloader"
+    },
+    {
+      "title": "CToast (Android Library)",
+      "imageUrl": "",
+      "subtitle": "Library :- In this user can modify toast according to his/her requirement.",
+      "playStoreUrl": "https://github.com/shivams1011/CToast"
+    }
+  ]
+}

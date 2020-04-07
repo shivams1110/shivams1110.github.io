@@ -4,37 +4,43 @@
       "title": "Enable DataBinding in Android kotlin",
       "subTitle": "In this post I am going to demonstrate how to Enable DataBinding in Android and how we can...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/03/Screen-Shot-2020-03-11-at-12.06.25-AM.png",
-      "date": "March 10, 2020"
+      "date": "March 10, 2020",
+      "url": "http://developertechie.com/2020/03/enable-databinding-in-android-kotlin/"
     },
     {
       "title": "Init Block in Kotlin",
       "subTitle": "In this blog, we are going learn what is Init block in Kotlin? and why? Before that you...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/03/Screen-Shot-2020-03-01-at-12.53.25-PM-960x370.png",
-      "date": "March 1, 2020"
+      "date": "March 1, 2020",
+      "url": "http://developertechie.com/2020/03/init-block-in-kotlin/"
     },
     {
       "title": "Navigation & Routing in Flutter",
       "subTitle": "Most of the apps has multiple screens to show multiple information, for that we create multiple screen. For...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/02/Screen-Shot-2020-02-16-at-10.18.19-PM-960x348.png",
-      "date": "February 16, 2020"
+      "date": "February 16, 2020",
+      "url": "http://developertechie.com/2020/02/navigation-routing-in-flutter/"
     },
     {
       "title": "Create Splash Screen in Flutter",
       "subTitle": "As all of us know Splash Screen is how much important for app to show or recognition of...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/02/Screen-Shot-2020-02-09-at-12.16.40-AM-960x394.png",
-      "date": "February 8, 2020"
+      "date": "February 8, 2020",
+      "url": "http://developertechie.com/2020/02/create-splash-screen-in-flutter/"
     },
     {
       "title": "What is Widgets in Flutter?",
       "subTitle": "When I start learning Flutter the first things is to know about Widgets. What is Widget? Widgets is nothing...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/02/Screen-Shot-2020-02-04-at-10.52.02-PM.png?time=1584176474",
-      "date": "February 4, 2020"
+      "date": "February 4, 2020",
+      "url": "http://developertechie.com/2020/02/what-is-widgets-in-flutter/"
     },
     {
       "title": "Short-Cut keys for Android Studio for Mac-OS",
       "subTitle": "My motive for write this article is use shortcut command for more efficiency and productivity while coding. I...",
       "imageUrl": "https://secureservercdn.net/198.71.233.68/mzc.201.myftpupload.com/wp-content/uploads/2020/02/1_FeWW2MzifRtrs2QoArIMQw-960x540.jpeg",
-      "date": "February 2, 2020"
+      "date": "February 2, 2020",
+      "url": "http://developertechie.com/2020/02/short-cut-keys-for-android-studio-for-mac-os/"
     }
   ]
 

@@ -15,7 +15,7 @@
 
   --text: #e7ebf2;
   --text-muted: #97a1b1;
-  --text-faint: #616b78;
+  --text-faint: #8b95a2;
 
   --accent: #58b7f5;        /* interactive: links, buttons, focus */
   --accent-strong: #7cc7f7;
@@ -42,7 +42,7 @@
 
   --text: #1a2029;
   --text-muted: #566171;
-  --text-faint: #8c96a4;
+  --text-faint: #5f6975;
 
   --accent: #1774d1;
   --accent-strong: #135fac;
@@ -340,7 +340,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0;
   max-width: 46ch;
 }
-.about__bio strong { color: var(--accent); }
 
 .skills__label {
   font-family: var(--mono);

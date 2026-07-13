@@ -9,6 +9,10 @@
   /* ---------- theme toggle ---------- */
   var toggle = document.querySelector(".theme-toggle");
   if (toggle) {
+    /* Initialize aria-pressed on load to match resolved theme */
+    var currentTheme = root.getAttribute("data-theme") || "dark";
+    toggle.setAttribute("aria-pressed", String(currentTheme === "light"));
+
     toggle.addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);

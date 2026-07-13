@@ -1,6 +1,8 @@
 /* Progressive enhancements: theme toggle + scroll reveal.
    The page is fully functional without this file — the inline head
    script sets the initial theme, and all content is visible by default. */
+document.documentElement.classList.add("js");
+
 (function () {
   "use strict";
 

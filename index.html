@@ -1,46 +1,326 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <title>Shivam Sharma — Android &amp; Flutter Developer</title>
+  <meta name="description" content="Shivam Sharma is an Android &amp; Flutter developer with 8+ years building mobile apps. Explore projects, writing, and ways to get in touch." />
+  <link rel="canonical" href="https://shivamsharma.dev/" />
   <meta name="google-site-verification" content="MMOX-iyz2lDUu45Blb4ICnRbIq8Uq2aHwMs-Ljeg_sM" />
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="theme-color" content="#0b0e13" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fbfcfd" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="manifest" href="manifest.json" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shivam Sharma — Android &amp; Flutter Developer" />
+  <meta property="og:description" content="Android &amp; Flutter developer with 8+ years building mobile apps. Projects, writing, and contact." />
+  <meta property="og:url" content="https://shivamsharma.dev/" />
+  <meta property="og:image" content="https://shivamsharma.dev/assets/img/profile.jpg" />
+  <meta property="og:image:alt" content="Portrait of Shivam Sharma" />
 
-  <title>portfolio</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shivam Sharma — Android &amp; Flutter Developer" />
+  <meta name="twitter:description" content="Android &amp; Flutter developer with 8+ years building mobile apps. Projects, writing, and contact." />
+  <meta name="twitter:image" content="https://shivamsharma.dev/assets/img/profile.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivam Sharma",
+    "url": "https://shivamsharma.dev/",
+    "image": "https://shivamsharma.dev/assets/img/profile.jpg",
+    "jobTitle": "Android & Flutter Developer",
+    "sameAs": [
+      "https://github.com/shivams1110",
+      "https://www.linkedin.com/in/shivamsharma11/",
+      "https://twitter.com/shivams_me",
+      "https://theshivamsharma.medium.com/",
+      "https://www.instagram.com/official.shivam/",
+      "https://www.facebook.com/shivams1110"
+    ]
+  }
+  </script>
+
+  <!-- Set theme + progressive-enhancement flag before paint to avoid a flash -->
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=1701144718');
-      });
+    (function () {
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        root.setAttribute("data-theme", theme);
+      } catch (e) {
+        root.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
+  <!-- Retire the old Flutter PWA service worker for returning visitors -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        regs.forEach(function (reg) { reg.unregister(); });
+      }).catch(function () {});
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (keys) {
+          keys.forEach(function (key) { caches.delete(key); });
+        }).catch(function () {});
+      }
     }
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" role="banner">
+    <div class="nav__inner container">
+      <a class="wordmark" href="#top" aria-label="Shivam Sharma — home">~/shivam-sharma</a>
+      <nav class="nav__links" aria-label="Section navigation">
+        <a href="#about">about</a>
+        <a href="#work">work</a>
+        <a href="#blog">blog</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+          <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <line x1="12" y1="2.5" x2="12" y2="5" />
+            <line x1="12" y1="19" x2="12" y2="21.5" />
+            <line x1="2.5" y1="12" x2="5" y2="12" />
+            <line x1="19" y1="12" x2="21.5" y2="12" />
+            <line x1="5.2" y1="5.2" x2="6.9" y2="6.9" />
+            <line x1="17.1" y1="17.1" x2="18.8" y2="18.8" />
+            <line x1="5.2" y1="18.8" x2="6.9" y2="17.1" />
+            <line x1="17.1" y1="6.9" x2="18.8" y2="5.2" />
+          </g>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="hero__inner container">
+        <div class="hero__text">
+          <p class="hero__eyebrow">// Android &amp; Flutter developer</p>
+          <h1 class="hero__name">Shivam Sharma</h1>
+          <p class="hero__tagline">I build fast, reliable mobile apps for Android and Flutter — from Play Store products to reusable libraries.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">View work</a>
+            <a class="btn btn--ghost" href="https://drive.google.com/file/d/1tiOC9bgEGX8TKTTpTkTt63_Yw4y2o0ys/view?usp=sharing" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="social-row" aria-label="Social profiles">
+            <li>
+              <a href="https://github.com/shivams1110" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/shivamsharma11/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/shivams_me" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://theshivamsharma.medium.com/" target="_blank" rel="noopener" aria-label="Medium">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/official.shivam/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/shivams1110" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__portrait">
+          <img src="assets/img/profile.jpg" width="440" height="440" alt="Portrait of Shivam Sharma" />
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__heading"><span class="comment">//</span> about</h2>
+        <div class="about">
+          <p class="about__bio">8+ years of experience in mobile application development — 3 years in Android and 5+ years in Flutter. Currently working at Karnival Internet Technologies Pvt. Ltd. as a Mobile Application Developer.</p>
+          <div class="about__skills">
+            <p class="skills__label">// stack</p>
+            <ul class="skills">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Android</li>
+              <li>Kotlin</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>REST APIs</li>
+              <li>Git</li>
+              <li>CI/CD</li>
+              <li>Play Store</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <h2 class="section__heading"><span class="comment">//</span> work</h2>
+        <ul class="projects">
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/dentmark.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Dentmark</h3>
+            <p class="card__desc">An e-commerce app for dentists to buy dental equipment.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.dentmark" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/tirth-yatra.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Tirth Yatra</h3>
+            <p class="card__desc">A pilgrimage app that gathers Tirth Yatra destination information from across India into one place.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.tirathyatra" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/fortune-group.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Fortune Group</h3>
+            <p class="card__desc">A field-sales app for marketing staff, with built-in user tracking, daily visit reports, and attendance.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.fortunegroup" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/eastman-tools.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Eastman Tools</h3>
+            <p class="card__desc">A field-sales app for marketing staff, with built-in user tracking, sale-order punching, and attendance.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.eastmantools" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/gna-university.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">GNA University</h3>
+            <p class="card__desc">Surfaces the information a prospective student needs to seek admission or search for courses.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.gnauniversity" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/royalways.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Royalways Technologies Pvt. Ltd.</h3>
+            <p class="card__desc">The company showcase app presenting Royalways' projects and company information.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.royalways" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/monte-carlo.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Monte Carlo Retail</h3>
+            <p class="card__desc">A retailer-only app for tracking stock, daily sales, attendance, and targets achieved.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.royalways.montecarloretail" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/election-eye.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Election Eye</h3>
+            <p class="card__desc">Helps campaign teams run elections without overspending. Used in and around Ludhiana.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=election.royalways.com" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon"><img src="assets/img/projects/status-downloader.webp" width="56" height="56" alt="" loading="lazy" /></div>
+            <h3 class="card__title">Status Downloader</h3>
+            <p class="card__desc">Lets users save and share the WhatsApp statuses shown on their phone.</p>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.developertechie.statusdownloader" target="_blank" rel="noopener">View on Play Store <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card__icon card__icon--mono" aria-hidden="true"><span>C</span></div>
+            <h3 class="card__title">CToast</h3>
+            <p class="card__desc">An Android library for customising toast messages to fit your requirements.</p>
+            <a class="card__link" href="https://github.com/shivams1011/CToast" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="container">
+        <h2 class="section__heading"><span class="comment">//</span> blog</h2>
+        <ul class="posts">
+          <li class="post reveal">
+            <a class="post__link" href="http://web.archive.org/web/20200716034235/http://developertechie.com:80/2020/03/enable-databinding-in-android-kotlin/" target="_blank" rel="noopener">
+              <span class="post__title">Enable DataBinding in Android Kotlin</span>
+              <time class="post__date" datetime="2020-03-10">March 10, 2020</time>
+            </a>
+          </li>
+          <li class="post reveal">
+            <a class="post__link" href="http://web.archive.org/web/20200615202041/http://developertechie.com:80/2020/03/init-block-in-kotlin/" target="_blank" rel="noopener">
+              <span class="post__title">Init Block in Kotlin</span>
+              <time class="post__date" datetime="2020-03-01">March 1, 2020</time>
+            </a>
+          </li>
+          <li class="post reveal">
+            <a class="post__link" href="https://theshivamsharma.medium.com/navigation-routing-in-flutter-b2beb783cdf4" target="_blank" rel="noopener">
+              <span class="post__title">Navigation &amp; Routing in Flutter</span>
+              <time class="post__date" datetime="2020-02-16">February 16, 2020</time>
+            </a>
+          </li>
+          <li class="post reveal">
+            <a class="post__link" href="https://theshivamsharma.medium.com/create-splash-screen-in-flutter-b637f707dc17" target="_blank" rel="noopener">
+              <span class="post__title">Create Splash Screen in Flutter</span>
+              <time class="post__date" datetime="2020-02-08">February 8, 2020</time>
+            </a>
+          </li>
+          <li class="post reveal">
+            <a class="post__link" href="https://theshivamsharma.medium.com/what-is-widgets-in-flutter-d03721303c1d" target="_blank" rel="noopener">
+              <span class="post__title">What is Widgets in Flutter?</span>
+              <time class="post__date" datetime="2020-02-04">February 4, 2020</time>
+            </a>
+          </li>
+          <li class="post reveal">
+            <a class="post__link" href="https://theshivamsharma.medium.com/shortcut-keys-for-android-studio-macos-253fbd9d9940" target="_blank" rel="noopener">
+              <span class="post__title">Short-Cut Keys for Android Studio for Mac-OS</span>
+              <time class="post__date" datetime="2020-02-02">February 2, 2020</time>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <h2 class="section__heading"><span class="comment">//</span> contact</h2>
+      <p class="footer__lead">Open to interesting mobile work and collaborations. Find me around the web:</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/shivams1110" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/shivamsharma11/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://twitter.com/shivams_me" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://theshivamsharma.medium.com/" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.instagram.com/official.shivam/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/shivams1110" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+      <div class="footer__meta">
+        <span>© <span id="year">2026</span> Shivam Sharma</span>
+        <span class="footer__built">hand-built with plain HTML &amp; CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
